@@ -1,0 +1,18 @@
+server:
+  port: 8888 #Server端口,client访问端口 端口默认8888
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+        uri: https://github.com/forezp/SpringcloudConfig.git
+        searchPaths: respo
+        label: master
+        username:
+        password:
+eureka:
+  client:
+    serviceUrl:
+     defaultZone: http://localhost:8761/eureka/
